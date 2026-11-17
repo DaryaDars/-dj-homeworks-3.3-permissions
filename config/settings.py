@@ -23,9 +23,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-3(7glijdk2*bu28dv+jhkyje=b8&$1zrb#+k@+(r4vcng_4xrc'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False  # изменила с TRUE на FALSE  для Домашнее задание к лекции «Развертывание проекта»
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['130.49.148.211', '127.0.0.1', 'localhost']   # добавила Хост созданнного сервиера на рег.облако
+                                                               # для выполнени домашки для Домашнее задание
+                                                               # к лекции «Развертывание проекта»
 
 
 # Application definition
@@ -121,6 +123,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/6.1/howto/static-files/
 
 STATIC_URL = 'static/'
+STATIC_ROOT = BASE_DIR / 'static'  # <--- ДОБАВИТЬ ВОТ ЭТУ СТРОКУ
 
 
 # Email
